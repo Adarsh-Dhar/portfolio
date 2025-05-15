@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 76, 29, 149;
+  --background-start-rgb: 250, 245, 255;
+  --background-end-rgb: 255, 251, 235;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom right, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(76, 29, 149, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(76, 29, 149, 0.2);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(76, 29, 149, 0.3);
+}
